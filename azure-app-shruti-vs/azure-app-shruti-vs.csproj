@@ -5,6 +5,12 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>azure_app_shruti_vs</RootNamespace>
+    <ApplicationInsightsResourceId>/subscriptions/f58c32bc-9050-4a0a-aa78-0fda4420aefc/resourceGroups/azure-course-rg/providers/microsoft.insights/components/azure-app-shruti-vs</ApplicationInsightsResourceId>
+    <UserSecretsId>82ddb10c-0255-4075-93e1-a862badcd137</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.15.0" />
+  </ItemGroup>
 
 </Project>

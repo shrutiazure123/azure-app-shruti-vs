@@ -14,6 +14,7 @@ namespace azure_app_shruti_vs.Pages
 
         public void OnGet()
         {
+            throw new Exception("testing application insights");
         }
     }
 }
