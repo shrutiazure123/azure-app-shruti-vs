@@ -1,9 +1,14 @@
+using azure_app_shruti_vs.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"]);
-
+var connectionString = builder.Configuration.GetConnectionString("AzureSqlconnection");
+builder.Services.AddDbContext<AppDbContext>(options =>
+options.UseSqlServer(connectionString));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
